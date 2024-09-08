@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contacts</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Montserrat"
+		/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="wrapper__layout-sky">
+				<div class="wrapper__header">
+					<div class="wrapper__logo">
+						<a href="../index.html"
+							><img src="../images/logo-blue.svg" alt="logo"
+						/></a>
+					</div>
+					<header>
+						<ul class="nav">
+							<li class="nav__item">
+								<a href="../index.html" class="nav__link nav__item">Welcome</a>
+							</li>
+							<li class="nav__item">
+								<a href="about.html" class="nav__link nav__item">About</a>
+							</li>
+							<li class="nav__item">
+								<a href="articles.html" class="nav__link nav__item">Articles</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link nav__item nav__item-selected"
+									>Contacts</a
+								>
+							</li>
+							<li class="nav__item">
+								<a href="gallery.html" class="nav__link nav__item">Gallery</a>
+							</li>
+							<li class="nav__item">
+								<a href="quiz.html" class="nav__link nav__item">Quiz</a>
+							</li>
+							<li class="nav__item">
+								<a href="virtual-kalimba.html" class="nav__link nav__item"
+									>Virtual Kalimba</a
+								>
+							</li>
+						</ul>
+					</header>
+				</div>
+			</div>
+			<div class="wrapper__layout-green">
+				<h1>Contact me!</h1>
+			</div>
+			<div class="wrapper__layout-beige">
+				<div class="form__wrapper">
+					<form
+						id="form"
+						action="https://fom.in.ua/echo"
+						method="post"
+						target="_blank"
+					>
+						<fieldset>
+							<legend>Personal Information</legend>
+							<div class="form__row">
+								<label for="name">Name&ast;</label>
+								<input
+									type="text"
+									id="name"
+									name="name"
+									placeholder="Enter your full name"
+									required
+									autofocus
+									autocomplete="off"
+								/>
+							</div>
+							<div class="form__row">
+								<label for="email">Email&ast;</label>
+								<input
+									type="email"
+									id="email"
+									name="email"
+									placeholder="Enter your email address"
+									required
+									autocomplete="off"
+								/>
+							</div>
+							<div class="form__row">
+								<label for="phone">Phone Number</label>
+								<input
+									type="tel"
+									id="phone"
+									name="phone"
+									placeholder="123-456-7890"
+									pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+									autocomplete="off"
+								/>
+							</div>
+						</fieldset>
+						<fieldset>
+							<legend>Kalimba Preferences</legend>
+							<div class="form__row">
+								<label for="kalimba-type"
+									>What type of Kalimba do you prefer?</label
+								>
+								<select id="kalimba-type" name="kalimba-type">
+									<option value="wooden">Wooden Kalimba</option>
+									<option value="acrylic">Acrylic Kalimba</option>
+									<option value="decorative">Decorative Kalimba</option>
+									<option value="colorful">Colorful Kalimba</option>
+									<option value="fantasy">Fantasy Kalimba</option>
+								</select>
+							</div>
+							<div class="form__row">
+								<label>How experienced are you with Kalimba?</label>
+								<div>
+									<input
+										type="radio"
+										id="beginner"
+										name="experience"
+										value="beginner"
+										required
+									/>
+									<label for="beginner">Beginner</label>
+								</div>
+								<div>
+									<input
+										type="radio"
+										id="intermediate"
+										name="experience"
+										value="intermediate"
+									/>
+									<label for="intermediate">Intermediate</label>
+								</div>
+								<div>
+									<input
+										type="radio"
+										id="advanced"
+										name="experience"
+										value="advanced"
+									/>
+									<label for="advanced">Advanced</label>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset>
+							<legend>Additional Preferences</legend>
+							<div class="form__row">
+								<label for="number-kalimbas"
+									>How many Kalimbas are you interested in?</label
+								>
+								<input
+									type="number"
+									id="number-kalimbas"
+									name="number-kalimbas"
+									min="1"
+									max="10"
+									value="1"
+								/>
+							</div>
+							<div class="form__row">
+								<label for="kalimba-range"
+									>Select your preferred Kalimba keys range:</label
+								>
+								<input
+									type="range"
+									id="kalimba-range"
+									name="kalimba-range"
+									min="7"
+									max="40"
+									value="17"
+									step="1"
+									disabled
+								/>
+								<output for="kalimba-range" id="range-output">17 keys</output>
+							</div>
+							<div class="form__row">
+								<label for="kalimba-color"
+									>Pick your preferred Kalimba color:</label
+								>
+								<input
+									type="color"
+									id="kalimba-color"
+									name="kalimba-color"
+									value="#F9C5D1"
+								/>
+							</div>
+						</fieldset>
+						<fieldset>
+							<legend>Preferred Contact Date and Time</legend>
+							<div class="form__row">
+								<label for="contact-date">Date</label>
+								<input type="date" id="contact-date" name="contact-date" />
+							</div>
+							<div class="form__row">
+								<label for="contact-time">Time</label>
+								<input
+									type="time"
+									id="contact-time"
+									name="time"
+									min="08:00"
+									max="18:00"
+								/>
+							</div>
+						</fieldset>
+						<div class="form__row">
+							<fieldset>
+								<legend><label for="message">Message</label></legend>
+								<textarea
+									id="message"
+									name="message"
+									rows="5"
+									placeholder="Enter your message..."
+								></textarea>
+							</fieldset>
+						</div>
+						<div class="form__row">
+							<label for="subscribe">
+								<input
+									type="checkbox"
+									checked
+									id="subscribe"
+									name="subscribe"
+									value="yes"
+								/>
+								Subscribe to newsletter
+							</label>
+						</div>
+						<div class="form__row">
+							<input type="submit" value="Submit" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
